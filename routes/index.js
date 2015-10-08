@@ -3,7 +3,7 @@ var router = express.Router();
 var Client = require('node-rest-client').Client;
 client = new Client();
 
-var getFunction = function(req, res, next) {
+var login = function(req, res, next) {
    console.log('username ' + req.query.username);
    console.log('password ' + req.query.password);
    console.log('username ' + req.query.uri);
@@ -22,6 +22,6 @@ var getFunction = function(req, res, next) {
 
 }
 
-router.get('/api', getFunction);
+router.get('/api', login);
 
 module.exports = router;
