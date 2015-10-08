@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/blauwhof/sap-bi-rest-client",
   "dependencies": {
-    "express": "^4.13.3"
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "node-rest-client": "^1.5.1"
   }
 }
