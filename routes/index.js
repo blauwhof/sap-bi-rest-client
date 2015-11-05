@@ -20,6 +20,8 @@ var login = function(req, res, next) {
                // raw response
                console.log(response.body);
                //console.log(response.headers['x-sap-logontoken']);
+               res.header("Access-Control-Allow-Origin", "*");
+               res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
                res.json({'xSapLogonToken' : response.headers['x-sap-logontoken']});
    });
 
@@ -44,6 +46,8 @@ var proxy = function(req, res, next) {
                // raw response
              console.log('data: ' + data);
                //console.log(response.headers['x-sap-logontoken']);
+               res.header("Access-Control-Allow-Origin", "*");
+               res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
                res.send(data);
    });
 }
