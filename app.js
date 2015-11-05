@@ -1,10 +1,11 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var router = express.Router();
 
 console.log('starting sap-bi-rest-client');
 
 var app = express();
-
+app.use(bodyParser.json({limit: '2mb'}));
 app.use('/', require('./routes'));
 
 //serve the static content from /admin
